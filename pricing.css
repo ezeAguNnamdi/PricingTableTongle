@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:708&display=swap');
+
+*{
+ box-sizing: border-box;
+}
+
+body{
+ font-family: 'Montserrat', san-serif;
+ color:hsl(240, 13%, 48%);
+ display: flex; /*makes all item be on same horizontal plane*/
+ background: rgb(210, 212, 221);
+ color: hsl(240, 7%, 18%);
+ text-align: center;
+ justify-content: center;
+ min-height: 100vh; /*8makes item to be at the center of the page*/
+ }
+
+ .container{
+  width:1200px;
+  max-width: 100%;
+  margin: auto;
+ }
+
+ .flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ h1{
+  color: hsl(240, 9%, 47%);
+ }
+
+.toggle-container{
+ color: hsl(240, 10%, 63%);
+ margin-bottom: 40px;
+}
+
+.price-box h4{
+margin: 0;
+}
+
+.price-box{
+ background-color: white;
+ padding: 40px;
+ border-radius: 10px;
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+ margin: 10px;
+} 
+
+.price-box p{
+ font-size: 3em;
+ font-family: 'Montserrat', san-serif;
+ margin: 15px 0;
+}
+
+.price-box .monthly{ /*ths mkes one of the prices to be hidden*/
+ display: none;
+}
+
+.show-monthly .price-box .monthly{
+ display: block;
+}
+
+.show-monthly .price-box .annually{
+ display: none;
+}
+
+
+.price-box ul{
+ padding: 0;
+ list-style: none;
+ border-top:1px solid hsl(240, 7%, 62%);
+ font-size: 14px;
+}
+
+.price-box li{
+ border-bottom: 1px solid hsl(240, 7%, 62%);
+ padding: 15px 0;
+}
+
+.price-box button{
+ background-image: linear-gradient(to left, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+ color: white;
+ border: none;
+ border-radius: 5px;
+ width: 100%;
+ padding: 15px;
+ margin-top: 10px;
+ font-family: 'Montserrat', san-serif;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+}
+
+.price-box.price-box-premium{
+ background-image: linear-gradient(to left, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+ color:white;
+ transform: scale(1.19);
+}
+.price-box.price-box-premium >*{
+ transform: scale(0.869);
+
+}
+
+.price-box.price-box-premium button{
+ background-image: none; /*makes the middle price button to be white background*/
+ background-color: white;/*because of no gradient*/
+ color:hsl(237, 63%, 64%); 
+}
+
+.price-box.price-box-premium ul,
+.price-box.price-box-premium li{
+ border-color:hsl(240, 10%, 80%);
+}
